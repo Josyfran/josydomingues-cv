@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josy Domingues | Estrategista B2B & Growth</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js para os gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
         body {
@@ -90,16 +92,17 @@
         </header>
 
         <!-- === NAVEGAÇÃO INTERATIVA (A ROTA) === -->
-        <nav class="flex justify-center space-x-4 md:space-x-12 mb-10 p-3 rounded-full bg-white shadow-md sticky top-0 z-20">
-            <button class="nav-button active text-base md:text-lg px-2 py-1" data-target="section-resumo">1. Visão Estratégica & Toolkit</button>
+        <nav class="flex justify-center space-x-4 md:space-x-8 mb-10 p-3 rounded-full bg-white shadow-md sticky top-0 z-20">
+            <button class="nav-button active text-base md:text-lg px-2 py-1" data-target="section-resumo">1. Visão Estratégica</button>
             <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-trajetoria">2. Trajetória</button>
             <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-formacao">3. Formação</button>
+            <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-toolkit">4. Toolkit & Habilidades</button>
         </nav>
 
         <!-- === CONTEÚDO DAS SEÇÕES === -->
         <div id="sections-container" class="space-y-12">
 
-            <!-- 1. VISÃO ESTRATÉGICA (O Pitch Principal e Habilidades) -->
+            <!-- 1. VISÃO ESTRATÉGICA (O Pitch Principal e Gráfico de Fit) -->
             <section id="section-resumo" class="section section-card p-6 md:p-10 rounded-xl shadow-lg border-l-8 border-indigo-700">
                 <h3 class="text-3xl font-bold color-innovation mb-4">⭐ Visão Estratégica (O Resumo do Viajante)</h3>
                 <p class="text-lg text-gray-700 leading-relaxed">
@@ -113,57 +116,25 @@
                         <li><b>LATAM Focus:</b> Em aprimoramento contínuo em <b>espanhol</b>, com facilidade de comunicação multicultural e paixão pela expansão regional.</li>
                         <li><b>Cultura Horizontal:</b> Perfil colaborativo, curioso e adaptável ao ritmo de startups.</li>
                     </ul>
-                    <p class="mt-3 text-sm font-semibold color-innovation">Busco aplicar esse *know-how* para <b>elevar a marca Stays</b> no Brasil e na América Latina.</p>
+                    <p class="mt-3 text-sm font-semibold color-innovation">Busco aplicar esse know-how para <b>elevar marcas</b> no Brasil e na América Latina.</p>
                 </div>
                 
-                <!-- CONTEÚDO MOVIDO DE TOOLKIT -->
-                <h3 class="text-2xl font-bold color-innovation mt-10 mb-6 border-b-2 border-lime-400 pb-2">🛠️ Toolkit Estratégico e Cultural</h3>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- Toolkit -->
-                    <div>
-                        <h4 class="text-xl font-bold text-gray-800 mb-4 pb-2">Suas Ferramentas</h4>
-                        
-                        <div class="space-y-4">
-                            <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
-                                <p class="font-bold text-lg color-innovation">Eventos B2B LATAM</p>
-                                <p class="text-sm text-gray-600">Planejamento, RFP, Roteiro, Cenografia, A/V, *Speakers*. <b>Domínio da Operação (Requisito Principal)</b></p>
-                            </div>
-                            <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
-                                <p class="font-bold text-lg color-innovation">Growth & Automação</p>
-                                <p class="text-sm text-gray-600">RD Station Marketing/CRM, <b>Make (n8n)</b>, Funis de Nutrição e Aquisição. <b>Software e Automação (Diferencial Stays)</b></p>
-                            </div>
-                            <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
-                                <p class="font-bold text-lg color-innovation">Data & Finanças</p>
-                                <p class="text-sm text-gray-600">Looker Studio, Sheets, Planejamento de <b>Budget</b>, Controle de Custos. <b>Foco em Resultados e Decisão Baseada em Dados</b></p>
-                            </div>
-                            <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
-                                <p class="font-bold text-lg color-innovation">Soft Skills & Cultura</p>
-                                <p class="text-sm text-gray-600"><b>Espanhol Intermediário</b> (em desenvolvimento), Liderança Colaborativa, <b>Resiliência e Adaptabilidade</b>. <b>Ética, Transparência, Aprendizagem Contínua</b></p>
-                            </div>
-                        </div>
+                <!-- DASHBOARD COMPARATIVO -->
+                <div class="mt-10">
+                    <h4 class="text-2xl font-bold color-innovation mb-4">Dashboard Comparativo: Fit Técnico & Cultural (1-5)</h4>
+                    <p class="text-sm text-gray-600 mb-4">Selecione o formato de visualização das competências:</p>
+                    
+                    <div class="flex space-x-4 mb-6">
+                        <button id="show-radar" class="px-4 py-2 text-sm font-medium rounded-full bg-indigo-100 text-indigo-700 hover:bg-indigo-200 transition">Gráfico 1: Radar (Visão 360)</button>
+                        <button id="show-bar" class="px-4 py-2 text-sm font-medium rounded-full bg-lime-100 text-lime-700 hover:bg-lime-200 transition">Gráfico 2: Barras Agrupadas (Comparação Direta)</button>
                     </div>
 
-                    <!-- Diferenciais Stays -->
-                    <div class="flex flex-col">
-                        <h4 class="text-xl font-bold text-gray-800 mb-4 pb-2">🌍 Diferenciais Stays (Matching Cultural)</h4>
-                        <div class="flex-grow space-y-4">
-                            <div class="p-4 bg-lime-50 rounded-lg shadow-sm border-l-4 border-lime-500">
-                                <p class="font-bold text-gray-800">✅ Foco B2B Tech</p>
-                                <p class="text-sm text-gray-600">Experiência com eventos e marketing no setor de tecnologia e software (SaaS).</p>
-                            </div>
-                            <div class="p-4 bg-lime-50 rounded-lg shadow-sm border-l-4 border-lime-500">
-                                <p class="font-bold text-gray-800">✅ Compliance & Risco</p>
-                                <p class="text-sm text-gray-600">Capacidade de liderar a operação no dia do evento, gerindo riscos e aspectos de *compliance* e segurança.</p>
-                            </div>
-                            <div class="p-4 bg-lime-50 rounded-lg shadow-sm border-l-4 border-lime-500">
-                                <p class="font-bold text-gray-800">✅ Patrocínios e Co-Marketing</p>
-                                <p class="text-sm text-gray-600">Atuação prévia na gestão de parceiros e patrocinadores.</p>
-                            </div>
-                            <div class="p-4 bg-lime-50 rounded-lg shadow-sm border-l-4 border-lime-500">
-                                <p class="font-bold text-gray-800">✅ Visão 360</p>
-                                <p class="text-sm text-gray-600">Combino a excelência operacional (Produtora de Eventos) com a visão de funil e métricas (Estrategista de Marketing).</p>
-                            </div>
+                    <div class="bg-white p-6 rounded-xl shadow-inner border border-gray-100">
+                        <div id="chart-container-radar" class="chart-container" style="max-height: 400px; max-width: 600px; margin: auto;">
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                        <div id="chart-container-bar" class="chart-container hidden" style="max-height: 450px; max-width: 900px; margin: auto;">
+                            <canvas id="barChart"></canvas>
                         </div>
                     </div>
                 </div>
@@ -249,6 +220,52 @@
                     </div>
                 </div>
             </section>
+            
+            <!-- 4. TOOLKIT E HABILIDADES (Nova Seção) -->
+            <section id="section-toolkit" class="section section-card p-6 md:p-10 rounded-xl shadow-lg hidden">
+                <h3 class="text-3xl font-bold color-innovation mb-6">🛠️ Toolkit Estratégico e Habilidades</h3>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Toolkit -->
+                    <div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-lime-400 pb-2">Suas Ferramentas Técnicas</h4>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
+                                <p class="font-bold text-lg color-innovation">Eventos B2B LATAM</p>
+                                <p class="text-sm text-gray-600">Planejamento, RFP, Roteiro, Cenografia, A/V, *Speakers*. <b>Domínio da Operação (Requisito Principal)</b></p>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
+                                <p class="font-bold text-lg color-innovation">Growth & Automação</p>
+                                <p class="text-sm text-gray-600">RD Station Marketing/CRM, <b>Make (n8n)</b>, Funis de Nutrição e Aquisição. <b>Software e Automação (Diferencial Stays)</b></p>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
+                                <p class="font-bold text-lg color-innovation">Data & Finanças</p>
+                                <p class="text-sm text-gray-600">Looker Studio, Sheets, Planejamento de <b>Budget</b>, Controle de Custos. <b>Foco em Resultados e Decisão Baseada em Dados</b></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills & Diferenciais -->
+                    <div class="flex flex-col">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-lime-400 pb-2">🌍 Soft Skills & Matching Cultural</h4>
+                        <div class="flex-grow space-y-4">
+                             <div class="p-4 bg-lime-50 rounded-lg shadow-sm border-l-4 border-lime-500">
+                                <p class="font-bold text-gray-800">✅ Soft Skills & Cultura</p>
+                                <p class="text-sm text-gray-600"><b>Espanhol Intermediário</b> (em desenvolvimento), Liderança Colaborativa, <b>Resiliência e Adaptabilidade</b>. <b>Ética, Transparência, Aprendizagem Contínua</b></p>
+                            </div>
+                            <div class="p-4 bg-lime-50 rounded-lg shadow-sm border-l-4 border-lime-500">
+                                <p class="font-bold text-gray-800">✅ Compliance & Risco</p>
+                                <p class="text-sm text-gray-600">Capacidade de liderar a operação no dia do evento, gerindo riscos e aspectos de *compliance* e segurança.</p>
+                            </div>
+                            <div class="p-4 bg-lime-50 rounded-lg shadow-sm border-l-4 border-lime-500">
+                                <p class="font-bold text-gray-800">✅ Visão 360</p>
+                                <p class="text-sm text-gray-600">Combino a excelência operacional (Produtora de Eventos) com a visão de funil e métricas (Estrategista de Marketing).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </div>
     </div>
@@ -258,15 +275,143 @@
     </footer>
 
     <script>
+        // --- DATA DE HABILIDADES ---
+        const CHART_LABELS = ['Operação Eventos 360', 'Growth & Automação (SaaS)', 'Gestão de Budget & ROI', 'Liderança & Humanização', 'Visão de Expansão (LATAM)'];
+        const DATA_JOSY = [5, 5, 4, 5, 4]; // 1-5 score de Josy
+        const DATA_JOB_REQUIRED = [5, 4, 4, 4, 5]; // 1-5 score Requerido
+
+        let radarChartInstance = null;
+        let barChartInstance = null;
+
+        // --- FUNÇÕES DE RENDERIZAÇÃO DE GRÁFICOS ---
+        function renderRadarChart() {
+            const ctx = document.getElementById('radarChart').getContext('2d');
+            if (radarChartInstance) radarChartInstance.destroy();
+            
+            radarChartInstance = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: CHART_LABELS,
+                    datasets: [
+                        {
+                            label: 'Josy (Possuído)',
+                            data: DATA_JOSY,
+                            backgroundColor: 'rgba(132, 204, 22, 0.4)', // Lime 400 - Humanização/Growth
+                            borderColor: '#84cc16', 
+                            borderWidth: 2,
+                            pointBackgroundColor: '#84cc16',
+                            pointBorderColor: '#fff',
+                        },
+                        {
+                            label: 'Requerido (Stays)',
+                            data: DATA_JOB_REQUIRED,
+                            backgroundColor: 'rgba(67, 56, 202, 0.2)', // Indigo 700 - Inovação/Tech
+                            borderColor: '#4338ca',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#4338ca',
+                            pointBorderColor: '#fff',
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0,0,0,0.1)' },
+                            grid: { color: 'rgba(0,0,0,0.1)' },
+                            pointLabels: { font: { size: 14, weight: 'bold' }, color: '#4b5563' },
+                            suggestedMin: 0,
+                            suggestedMax: 5,
+                            ticks: { display: false }
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        title: { display: true, text: 'Gráfico 1: Radar (Visão 360 de Competências)', font: { size: 16, weight: 'bold' }, color: '#4338ca' }
+                    }
+                }
+            });
+        }
+
+        // NOVO GRÁFICO DE BARRAS AGRUPADAS (Vertical)
+        function renderBarChart() {
+            const ctx = document.getElementById('barChart').getContext('2d');
+            if (barChartInstance) barChartInstance.destroy();
+            
+            barChartInstance = new Chart(ctx, {
+                type: 'bar', // Tipo barra vertical
+                data: {
+                    labels: CHART_LABELS,
+                    datasets: [
+                        {
+                            label: 'Josy (Possuído)',
+                            data: DATA_JOSY,
+                            backgroundColor: '#84cc16', // Lime 500
+                            borderColor: '#65a30d',
+                            borderWidth: 1,
+                        },
+                        {
+                            label: 'Requerido (Stays)',
+                            data: DATA_JOB_REQUIRED,
+                            backgroundColor: '#4338ca', // Indigo 700
+                            borderColor: '#3730a3',
+                            borderWidth: 1,
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            suggestedMin: 0,
+                            suggestedMax: 5,
+                            ticks: { stepSize: 1 },
+                            title: { display: true, text: 'Nível de Competência (1-5)', font: { size: 14 } }
+                        },
+                        x: {
+                            // Rotação para melhor visualização de labels longos
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'top' },
+                        title: { display: true, text: 'Gráfico 2: Comparação Direta (Nível de Fit)', font: { size: 16, weight: 'bold' }, color: '#4338ca' }
+                    }
+                }
+            });
+        }
+        
+        // --- FUNÇÕES DE NAVEGAÇÃO E INICIALIZAÇÃO ---
         document.addEventListener('DOMContentLoaded', () => {
             const navButtons = document.querySelectorAll('.nav-button');
             const sections = document.querySelectorAll('.section');
-            
+            const radarContainer = document.getElementById('chart-container-radar');
+            const barContainer = document.getElementById('chart-container-bar');
+            const showRadarBtn = document.getElementById('show-radar');
+            const showBarBtn = document.getElementById('show-bar');
+
             function showSection(targetId) {
                 sections.forEach(section => {
                     section.classList.add('hidden');
                 });
                 document.getElementById(targetId).classList.remove('hidden');
+
+                // Renderiza o gráfico quando a seção "resumo" é exibida
+                if (targetId === 'section-resumo') {
+                    // Garante que o gráfico visível seja renderizado
+                    // Se o Radar estiver visível ou não existir (primeira carga), renderiza ele
+                    if (!radarContainer.classList.contains('hidden') || (!radarChartInstance && barContainer.classList.contains('hidden'))) {
+                         if (!radarChartInstance) renderRadarChart();
+                    } else if (!barContainer.classList.contains('hidden')) {
+                         // Se o Bar Chart estiver visível
+                         if (!barChartInstance) renderBarChart();
+                    }
+                }
             }
 
             function updateNavigation(activeButton) {
@@ -282,10 +427,24 @@
                 });
             });
 
-            // Initialize: Show the first section
+            // Lógica do seletor de gráficos
+            showRadarBtn.addEventListener('click', () => {
+                barContainer.classList.add('hidden');
+                radarContainer.classList.remove('hidden');
+                renderRadarChart();
+            });
+
+            showBarBtn.addEventListener('click', () => {
+                radarContainer.classList.add('hidden');
+                barContainer.classList.remove('hidden');
+                renderBarChart();
+            });
+
+            // Inicializa: Mostra a primeira seção e o primeiro gráfico
             const initialButton = document.querySelector('.nav-button.active');
             if (initialButton) {
                 showSection(initialButton.getAttribute('data-target'));
+                renderRadarChart(); // Renderiza o radar por padrão
             }
         });
     </script>
