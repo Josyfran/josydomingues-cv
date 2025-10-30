@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josy Domingues | Estrategista B2B & Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js para os gráficos --><script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Fundo sutil de mapa/coordenadas para a sensação de viagem/LATAM (Azul claro/Lilás) */
+            background-color: #f7f7ff;
+            background-image: radial-gradient(#d1d5db 1px, transparent 0);
+            background-size: 40px 40px;
+            position: relative;
+        }
+
+        .main-container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-card {
+            background-color: rgba(255, 255, 255, 0.95); /* Levemente transparente */
+            backdrop-filter: blur(5px);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button {
+            transition: all 0.3s ease;
+            position: relative;
+            font-weight: 600;
+        }
+
+        .nav-button.active {
+            color: #4338ca; /* Indigo 700 */
+        }
+        
+        /* Linha sob o botão ativo - Verde Limão */
+        .nav-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 3px;
+            background-color: #84cc16; /* Lime 500 - Humanização */
+            border-radius: 9999px;
+        }
+        
+        .job-details {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Novas Classes de Cores */
+        .color-innovation { color: #4338ca; } /* Indigo 700 */
+        .color-human { color: #84cc16; } /* Lime 500 */
+        .bg-innovation { background-color: #4338ca; } 
+        .bg-human { background-color: #84cc16; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- === Main Content Area === --><div class="main-container container mx-auto p-4 md:p-10 max-w-6xl">
+        
+        <!-- === CABEÇALHO E IDENTIFICAÇÃO === --><header class="p-6 md:p-8 rounded-xl shadow-xl mb-10 bg-white border-b-4 border-lime-500 section-card">
+            <div class="flex flex-col md:flex-row justify-between items-start">
+                <div>
+                    <h1 class="text-4xl font-extrabold color-innovation tracking-tight">Josy Francisco Domingues</h1>
+                    <h2 class="text-xl text-gray-700 font-medium mt-1">Estrategista de Eventos B2B & Growth | Liderança LATAM | SaaS & Automação</h2>
+                </div>
+                
+                <div class="text-right mt-4 md:mt-0 text-sm text-gray-600 space-y-1">
+                    <p>📍 Saquarema – RJ</p>
+                    <p>✉ <a href="mailto:josyyfrann@gmail.com" class="hover:text-lime-500">josyyfrann@gmail.com</a></p>
+                    <p>☎ (21) 97384-0942</p>
+                    <p class="font-semibold text-lime-600">Disponibilidade para Viagens Brasil/LATAM</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- === NAVEGAÇÃO INTERATIVA (A ROTA) === --><nav class="flex justify-center space-x-4 md:space-x-8 mb-10 p-3 rounded-full bg-white shadow-md sticky top-0 z-20">
+            <button class="nav-button active text-base md:text-lg px-2 py-1" data-target="section-resumo">1. Visão Estratégica</button>
+            <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-trajetoria">2. Trajetória</button>
+            <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-formacao">3. Formação</button>
+            <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-toolkit">4. Toolkit & Habilidades</button>
+        </nav>
+
+        <!-- === CONTEÚDO DAS SEÇÕES === --><div id="sections-container" class="space-y-12">
+
+            <!-- 1. VISÃO ESTRATÉGICA (O Pitch Principal e Gráfico de Fit) --><section id="section-resumo" class="section section-card p-6 md:p-10 rounded-xl shadow-lg border-l-8 border-indigo-700">
+                <h3 class="text-3xl font-bold color-innovation mb-4">⭐ Visão Estratégica (O Resumo do Viajante)</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Com mais de <b>10 anos</b> em Marketing, Inovação e Eventos, sou uma profissional <b>data-driven</b> e <b>resiliente</b> com experiência em ambientes de alta performance e tecnologia (HealthTechs, Eventos de Inovação). Minha paixão é conectar a excelência operacional de eventos (do RFP ao NPS) com a automação de funis (Growth & Automação), gerando <b>resultados</b> tangíveis.
+                </p>
+                
+                <div class="mt-6 p-4 rounded-lg bg-indigo-50 border-l-4 border-lime-500">
+                    <h4 class="font-bold text-lg color-innovation mb-2">Por que 100% de Alinhamento com a Stays/Despegar?</h4>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 text-sm">
+                        <li><b>Tech & SaaS:</b> Experiência em software e automação (CRM, n8n, Make) e atuação em projetos de tecnologia (UXMed, AlquimIA).</li>
+                        <li><b>LATAM Focus:</b> Em aprimoramento contínuo em <b>espanhol</b>, com facilidade de comunicação multicultural e paixão pela expansão regional.</li>
+                        <li><b>Cultura Horizontal:</b> Perfil colaborativo, curioso e adaptável ao ritmo de startups.</li>
+                    </ul>
+                    <p class="mt-3 text-sm font-semibold color-innovation">Busco aplicar esse know-how para <b>elevar marcas</b> no Brasil e na América Latina.</p>
+                </div>
+                
+                <!-- DASHBOARD DE FIT --><div class="mt-10">
+                    <h4 class="text-2xl font-bold color-innovation mb-4">Radar de Competências: Seu Match com a Stays</h4>
+                    <p class="text-sm text-gray-600 mb-4">Visualize o alinhamento das minhas habilidades essenciais com os requisitos da vaga:</p>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-inner border border-gray-100">
+                        <div id="chart-container-radar" class="chart-container" style="max-height: 400px; max-width: 600px; margin: auto;">
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. TRAJETÓRIA PROFISSIONAL (A Jornada Detalhada) --><section id="section-trajetoria" class="section section-card p-6 md:p-10 rounded-xl shadow-lg hidden">
+                <h3 class="text-3xl font-bold color-innovation mb-6">🚀 Trajetória Profissional (Experiencia de Liderazgo)</h3>
+
+                <!-- Acordion for Jobs --><div class="space-y-6">
+
+                    <!-- UXMed --><div class="border-b pb-4">
+                        <h4 class="text-xl font-extrabold text-indigo-800">UXMed – Coordenadora de Projetos e Inovação</h4>
+                        <p class="text-sm italic text-gray-500 mb-3">Nov/2022 – Atual | Remoto | Healthtech</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><b>Planejamento Ponta a Ponta:</b> Coordenação do ciclo completo de eventos B2B (webinars e presenciais), garantindo a entrega <b>dentro do budget e prazo</b>.</li>
+                            <li><b>Growth & Automação:</b> Líder no desenvolvimento de fluxos de <b>automação</b> (RD Station, Make, n8n) para relacionamento e nutrição, otimizando o *customer journey* (CX/UX).</li>
+                            <li><b>Análise de Impacto:</b> Criação de *dashboards* de performance (KPIs, NPS) para garantir a <b>tomada de decisão baseada em dados</b> e otimização contínua.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Base Eventos --><div class="border-b pb-4">
+                        <h4 class="text-xl font-extrabold text-indigo-800">Base Eventos (Rio Innovation Week e LER) – Produtora de Eventos Corporativos</h4>
+                        <p class="text-sm italic text-gray-500 mb-3">2021 – 2022 | Rio de Janeiro – RJ</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><b>Excelência Operacional:</b> Gestão completa da arena HealthTech no RIW, incluindo <b>curadoria de conteúdo</b>, coordenação de equipes, fornecedores e controle rígido de budget (RFP).</li>
+                            <li><b>Experiência Imersiva:</b> Atuação em ambiente de <b>inovação e tecnologia</b>, com foco em cenografia, A/V e geração qualificada de *leads*.</li>
+                            <li><b>Comunicação Integrada:</b> Suporte estratégico ao marketing para campanhas de divulgação e relacionamento com patrocinadores.</li>
+                        </ul>
+                    </div>
+
+                    <!-- AlquimIA --><div class="pb-4">
+                        <h4 class="text-xl font-extrabold text-indigo-800">AlquimIA Automações – Fundadora & CEO</h4>
+                        <p class="text-sm italic text-gray-500 mb-3">2020 – 2022 | Empreendimento Próprio | SaaS & Tecnologia</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><b>Otimização de Custos:</b> Criação e implementação de soluções de <b>automação e chatbots com IA</b>, integrando CRMs e canais digitais para redução de custos B2B.</li>
+                            <li><b>Gestão por ROI:</b> Gerenciamento de projetos com foco em <b>performance e Retorno sobre Investimento (ROI)</b>.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 3. FORMAÇÃO (A Rota de Aprendizagem) --><section id="section-formacao" class="section section-card p-6 md:p-10 rounded-xl shadow-lg hidden">
+                <h3 class="text-3xl font-bold color-innovation mb-6">🎓 Rota de Aprendizagem (Formación)</h3>
+                <p class="text-gray-700 mb-6 text-sm">O aprendizado contínuo é um valor. Esta seção lista a base acadêmica e as certificações que complementam sua experiência prática.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 border-b border-indigo-200 pb-1">Formação Acadêmica</h4>
+                        <ul class="space-y-3">
+                            <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-indigo-500">
+                                <p class="font-semibold text-gray-900">Graduação em Marketing</p>
+                                <p class="text-sm text-gray-600">Estácio de Sá</p>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-indigo-500">
+                                <p class="font-semibold text-gray-900">Bacharelado em Sistemas de Informação</p>
+                                <p class="text-sm text-gray-600">(em andamento) – Estácio de Sá</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3 border-b border-indigo-200 pb-1">Certificações de Bordo</h4>
+                        <ul class="space-y-3">
+                            <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-lime-500">
+                                <p class="font-semibold text-gray-900">Growth Marketing</p>
+                                <p class="text-sm text-gray-600">GLA</p>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-lime-500">
+                                <p class="font-semibold text-gray-900">Gerenciamento de Projetos e Metodologias Ágeis</p>
+                                <p class="text-sm text-gray-600">Alumni Coppead</p>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-lime-500">
+                                <p class="font-semibold text-gray-900">Automação e Chatbots</p>
+                                <p class="text-sm text-gray-600">Automatik Labs</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 4. TOOLKIT E HABILIDADES (Nova Seção) --><section id="section-toolkit" class="section section-card p-6 md:p-10 rounded-xl shadow-lg hidden">
+                <h3 class="text-3xl font-bold color-innovation mb-6">🛠️ Toolkit Estratégico e Habilidades</h3>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Toolkit --><div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-lime-400 pb-2">Suas Ferramentas Técnicas</h4>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
+                                <p class="font-bold text-lg color-innovation">Eventos B2B LATAM</p>
+                                <p class="text-sm text-gray-600">Planejamento, RFP, Roteiro, Cenografia, A/V, *Speakers*. <b>Domínio da Operação (Requisito Principal)</b></p>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
+                                <p class="font-bold text-lg color-innovation">Growth & Automação</p>
+                                <p class="text-sm text-gray-600">RD Station Marketing/CRM, <b>Make (n8n)</b>, Funis de Nutrição e Aquisição. <b>Software e Automação (Diferencial Stays)</b></p>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
+                                <p class="font-bold text-lg color-innovation">Data & Finanças</p>
+                                <p class="text-sm text-gray-600">Looker Studio, Sheets, Planejamento de <b>Budget</b>, Controle de Custos. <b>Foco em Resultados e Decisão Baseada em Dados</b></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills & Diferenciais --><div class="flex flex-col">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-lime-400 pb-2">🌍 Soft Skills & Matching Cultural</h4>
+                        <div class="flex-grow space-y-4">
+                             <div class="p-4 bg-lime-50 rounded-lg shadow-sm border-l-4 border-lime-500">
+                                <p class="font-bold text-gray-800">✅ Soft Skills & Cultura</p>
+                                <p class="text-sm text-gray-600"><b>Espanhol Intermediário</b> (em desenvolvimento), Liderança Colaborativa, <b>Resiliência e Adaptabilidade</b>. <b>Ética, Transparência, Aprendizagem Contínua</b></p>
+                            </div>
+                            <div class="p-4 bg-lime-50 rounded-lg shadow-sm border-l-4 border-lime-500">
+                                <p class="font-bold text-gray-800">✅ Compliance & Risco</p>
+                                <p class="text-sm text-gray-600">Capacidade de liderar a operação no dia do evento, gerindo riscos e aspectos de *compliance* e segurança.</p>
+                            </div>
+                            <div class="p-4 bg-lime-50 rounded-lg shadow-sm border-l-4 border-lime-500">
+                                <p class="font-bold text-gray-800">✅ Visão 360</p>
+                                <p class="text-sm text-gray-600">Combino a excelência operacional (Produtora de Eventos) com a visão de funil e métricas (Estrategista de Marketing).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <footer class="text-center p-6 mt-12 bg-white border-t border-gray-200 shadow-inner">
+        <p class="text-sm text-gray-600">Pronto para embarcar na expansão da Stays na América Latina.</p>
+    </footer>
+
+    <script>
+        // --- DATA DE HABILIDADES ---
+        const CHART_LABELS = ['Operação Eventos 360', 'Growth & Automação (SaaS)', 'Gestão de Budget & ROI', 'Liderança & Humanização', 'Visão de Expansão (LATAM)'];
+        const DATA_JOSY = [5, 5, 4, 5, 4]; // 1-5 score de Josy
+        const DATA_JOB_REQUIRED = [5, 4, 4, 4, 5]; // 1-5 score Requerido
+
+        let radarChartInstance = null; // Apenas um gráfico agora
+        
+        // --- FUNÇÕES DE RENDERIZAÇÃO DE GRÁFICOS ---
+        function renderRadarChart() {
+            const ctx = document.getElementById('radarChart').getContext('2d');
+            if (radarChartInstance) radarChartInstance.destroy();
+            
+            radarChartInstance = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: CHART_LABELS,
+                    datasets: [
+                        {
+                            label: 'Josy (Possuído)',
+                            data: DATA_JOSY,
+                            backgroundColor: 'rgba(132, 204, 22, 0.4)', // Lime 400 - Humanização/Growth
+                            borderColor: '#84cc16', 
+                            borderWidth: 2,
+                            pointBackgroundColor: '#84cc16',
+                            pointBorderColor: '#fff',
+                        },
+                        {
+                            label: 'Requerido (Stays)',
+                            data: DATA_JOB_REQUIRED,
+                            backgroundColor: 'rgba(67, 56, 202, 0.2)', // Indigo 700 - Inovação/Tech
+                            borderColor: '#4338ca',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#4338ca',
+                            pointBorderColor: '#fff',
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0,0,0,0.1)' },
+                            grid: { color: 'rgba(0,0,0,0.1)' },
+                            pointLabels: { font: { size: 14, weight: 'bold' }, color: '#4b5563' },
+                            suggestedMin: 0,
+                            suggestedMax: 5,
+                            ticks: { display: false }
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        title: { display: true, text: 'Radar de Competências: Seu Match com a Stays', font: { size: 16, weight: 'bold' }, color: '#4338ca' }
+                    }
+                }
+            });
+        }
+        
+        // --- FUNÇÕES DE NAVEGAÇÃO E INICIALIZAÇÃO ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-button');
+            const sections = document.querySelectorAll('.section');
+            const radarContainer = document.getElementById('chart-container-radar');
+            
+            function showSection(targetId) {
+                sections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+                document.getElementById(targetId).classList.remove('hidden');
+
+                // Renderiza o gráfico quando a seção "resumo" é exibida
+                if (targetId === 'section-resumo') {
+                    if (!radarChartInstance) renderRadarChart();
+                }
+            }
+
+            function updateNavigation(activeButton) {
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                activeButton.classList.add('active');
+            }
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-target');
+                    updateNavigation(button);
+                    showSection(targetId);
+                });
+            });
+
+            // Inicializa: Mostra a primeira seção e o gráfico radar
+            const initialButton = document.querySelector('.nav-button.active');
+            if (initialButton) {
+                showSection(initialButton.getAttribute('data-target'));
+                renderRadarChart(); // Renderiza o radar por padrão
+            }
+        });
+    </script>
+</body>
+</html>
