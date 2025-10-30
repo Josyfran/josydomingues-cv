@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josy Domingues | Estrategista B2B & Growth</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js para os gráficos --><script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
         body {
@@ -66,6 +67,26 @@
         .color-human { color: #84cc16; } /* Lime 500 */
         .bg-innovation { background-color: #4338ca; } 
         .bg-human { background-color: #84cc16; }
+
+        /* INJEÇÃO DE CSS PARA O CHATBOT */
+        /* Tentativa de estilizar o botão do chat com o verde limão */
+        /* O seletor exato pode variar dependendo da estrutura interna do widget */
+        .gptmaker-float-button {
+            background-color: #84cc16 !important; /* Cor do verde limão */
+            box-shadow: 0 4px 10px rgba(132, 204, 22, 0.5) !important; /* Sombra vibrante */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+        }
+
+        .gptmaker-float-button:hover {
+            background-color: #a3e635 !important; /* Um verde um pouco mais claro no hover */
+            box-shadow: 0 6px 15px rgba(132, 204, 22, 0.7) !important;
+        }
+        
+        /* Se o botão tiver um ícone SVG ou imagem interna, pode ser necessário mais CSS */
+        .gptmaker-float-button svg {
+            fill: #ffffff !important; /* Garante que o ícone interno seja branco */
+        }
+
     </style>
 </head>
 <body class="text-gray-800">
@@ -88,7 +109,7 @@
             </div>
         </header>
 
-        <!-- === NAVEGAÇÃO INTERATIVA (A ROTA) === --><nav class="flex justify-center space-x-4 md:space-x-8 mb-10 p-3 rounded-full bg-white shadow-md sticky top-0 z-20">
+        <!-- === NAVEGAÇÃO INTERATIVA (A Rota) === --><nav class="flex justify-center space-x-4 md:space-x-8 mb-10 p-3 rounded-full bg-white shadow-md sticky top-0 z-20">
             <button class="nav-button active text-base md:text-lg px-2 py-1" data-target="section-resumo">1. Visão Estratégica</button>
             <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-trajetoria">2. Trajetória</button>
             <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-formacao">3. Formação</button>
@@ -113,7 +134,7 @@
                     <p class="mt-3 text-sm font-semibold color-innovation">Busco aplicar esse know-how para <b>elevar marcas</b> no Brasil e na América Latina.</p>
                 </div>
                 
-                <!-- DASHBOARD DE FIT --><div class="mt-10">
+                <!-- DASHBOARD COMPARATIVO --><div class="mt-10">
                     <h4 class="text-2xl font-bold color-innovation mb-4">Radar de Competências: Seu Match com a Stays</h4>
                     <p class="text-sm text-gray-600 mb-4">Visualize o alinhamento das minhas habilidades essenciais com os requisitos da vaga:</p>
                     
@@ -250,6 +271,10 @@
         <p class="text-sm text-gray-600">Pronto para embarcar na expansão da Stays na América Latina.</p>
     </footer>
 
+    <!-- Adiciona o balão de bate-papo no canto inferior direito --><script 
+ async 
+ src="https://app.gptmaker.ai/widget/3E9776349A19327E768BFE986BECC174/float.js"></script>
+
     <script>
         // --- DATA DE HABILIDADES ---
         const CHART_LABELS = ['Operação Eventos 360', 'Growth & Automação (SaaS)', 'Gestão de Budget & ROI', 'Liderança & Humanização', 'Visão de Expansão (LATAM)'];
@@ -313,7 +338,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             const navButtons = document.querySelectorAll('.nav-button');
             const sections = document.querySelectorAll('.section');
-            const radarContainer = document.getElementById('chart-container-radar');
             
             function showSection(targetId) {
                 sections.forEach(section => {
