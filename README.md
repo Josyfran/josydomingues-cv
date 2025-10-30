@@ -104,17 +104,17 @@
             <section id="section-resumo" class="section section-card p-6 md:p-10 rounded-xl shadow-lg border-l-8 border-indigo-700">
                 <h3 class="text-3xl font-bold color-innovation mb-4">⭐ Visão Estratégica (O Resumo do Viajante)</h3>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    Com mais de **10 anos** em Marketing, Inovação e Eventos, sou uma profissional **data-driven** e **resiliente** com experiência em ambientes de alta performance e tecnologia (HealthTechs, Eventos de Inovação). Minha paixão é conectar a excelência operacional de eventos (do RFP ao NPS) com a automação de funis (Growth & Automação), gerando **resultados** tangíveis.
+                    Com mais de 10 anos em <b>Marketing, Inovação e Eventos</b>, sou uma profissional data-driven e resiliente com experiência em ambientes de alta performance e tecnologia (HealthTechs, Eventos de Inovação). Minha paixão é conectar a excelência operacional de eventos (do RFP ao NPS), automação de funis (Growth & Automação) e neuromarketing para gerar resultados tangíveis.
                 </p>
                 
                 <div class="mt-6 p-4 rounded-lg bg-indigo-50 border-l-4 border-lime-500">
                     <h4 class="font-bold text-lg color-innovation mb-2">Por que 100% de Alinhamento com a Stays/Despegar?</h4>
                     <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 text-sm">
-                        <li>**Tech & SaaS:** Experiência em software e automação (CRM, n8n, Make) e atuação em projetos de tecnologia (UXMed, AlquimIA).</li>
-                        <li>**LATAM Focus:** Em aprimoramento contínuo em **espanhol**, com facilidade de comunicação multicultural e paixão pela expansão regional.</li>
-                        <li>**Cultura Horizontal:** Perfil colaborativo, curioso e adaptável ao ritmo de startups.</li>
+                        <li><b>Tech & SaaS:</b> Experiência em software e automação (CRM, n8n, Make) e atuação em projetos de tecnologia (UXMed, AlquimIA).</li>
+                        <li><b>LATAM Focus:</b> Em aprimoramento contínuo em espanhol, com facilidade de comunicação multicultural e paixão pela expansão regional.</li>
+                        <li><b>Cultura Horizontal:</b> Perfil colaborativo, curioso e adaptável ao ritmo de startups.</li>
                     </ul>
-                    <p class="mt-3 text-sm font-semibold color-innovation">Busco aplicar esse *know-how* para **elevar a marca Stays** no Brasil e na América Latina.</p>
+                    <p class="mt-3 text-sm font-semibold color-innovation">Busco aplicar esse know-how para elevar marcas no Brasil e na América Latina.</p>
                 </div>
             </section>
 
