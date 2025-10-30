@@ -91,107 +91,62 @@
 
         <!-- === NAVEGAÇÃO INTERATIVA (A ROTA) === -->
         <nav class="flex justify-center space-x-4 md:space-x-12 mb-10 p-3 rounded-full bg-white shadow-md sticky top-0 z-20">
-            <button class="nav-button active text-base md:text-lg px-2 py-1" data-target="section-resumo">1. Visão Estratégica</button>
+            <button class="nav-button active text-base md:text-lg px-2 py-1" data-target="section-resumo">1. Visão Estratégica & Toolkit</button>
             <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-trajetoria">2. Trajetória</button>
-            <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-toolkit">3. Habilidades & Fit</button>
-            <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-formacao">4. Formação</button>
+            <button class="nav-button text-base md:text-lg px-2 py-1" data-target="section-formacao">3. Formação</button>
         </nav>
 
         <!-- === CONTEÚDO DAS SEÇÕES === -->
         <div id="sections-container" class="space-y-12">
 
-            <!-- 1. VISÃO ESTRATÉGICA (O Pitch Principal) -->
+            <!-- 1. VISÃO ESTRATÉGICA (O Pitch Principal e Habilidades) -->
             <section id="section-resumo" class="section section-card p-6 md:p-10 rounded-xl shadow-lg border-l-8 border-indigo-700">
                 <h3 class="text-3xl font-bold color-innovation mb-4">⭐ Visão Estratégica (O Resumo do Viajante)</h3>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    Com mais de 10 anos em <b>Marketing, Inovação e Eventos</b>, sou uma profissional data-driven e resiliente com experiência em ambientes de alta performance e tecnologia (HealthTechs, Eventos de Inovação). Minha paixão é conectar a excelência operacional de eventos (do RFP ao NPS), automação de funis (Growth & Automação) e neuromarketing para gerar resultados tangíveis.
+                    Com mais de <b>10 anos</b> em Marketing, Inovação e Eventos, sou uma profissional <b>data-driven</b> e <b>resiliente</b> com experiência em ambientes de alta performance e tecnologia (HealthTechs, Eventos de Inovação). Minha paixão é conectar a excelência operacional de eventos (do RFP ao NPS) com a automação de funis (Growth & Automação), gerando <b>resultados</b> tangíveis.
                 </p>
                 
                 <div class="mt-6 p-4 rounded-lg bg-indigo-50 border-l-4 border-lime-500">
                     <h4 class="font-bold text-lg color-innovation mb-2">Por que 100% de Alinhamento com a Stays/Despegar?</h4>
                     <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 text-sm">
                         <li><b>Tech & SaaS:</b> Experiência em software e automação (CRM, n8n, Make) e atuação em projetos de tecnologia (UXMed, AlquimIA).</li>
-                        <li><b>LATAM Focus:</b> Em aprimoramento contínuo em espanhol, com facilidade de comunicação multicultural e paixão pela expansão regional.</li>
+                        <li><b>LATAM Focus:</b> Em aprimoramento contínuo em <b>espanhol</b>, com facilidade de comunicação multicultural e paixão pela expansão regional.</li>
                         <li><b>Cultura Horizontal:</b> Perfil colaborativo, curioso e adaptável ao ritmo de startups.</li>
                     </ul>
-                    <p class="mt-3 text-sm font-semibold color-innovation">Busco aplicar esse know-how para elevar marcas no Brasil e na América Latina.</p>
+                    <p class="mt-3 text-sm font-semibold color-innovation">Busco aplicar esse *know-how* para <b>elevar a marca Stays</b> no Brasil e na América Latina.</p>
                 </div>
-            </section>
-
-            <!-- 2. TRAJETÓRIA PROFISSIONAL (A Jornada Detalhada) -->
-            <section id="section-trajetoria" class="section section-card p-6 md:p-10 rounded-xl shadow-lg hidden">
-                <h3 class="text-3xl font-bold color-innovation mb-6">🚀 Trajetória Profissional (Experiencia de Liderazgo)</h3>
-
-                <!-- Acordion for Jobs -->
-                <div class="space-y-6">
-
-                    <!-- UXMed -->
-                    <div class="border-b pb-4">
-                        <h4 class="text-xl font-extrabold text-indigo-800">UXMed – Coordenadora de Projetos e Inovação</h4>
-                        <p class="text-sm italic text-gray-500 mb-3">Nov/2022 – Atual | Remoto | Healthtech</p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                            <li>**Planejamento Ponta a Ponta:** Coordenação do ciclo completo de eventos B2B (webinars e presenciais), garantindo a entrega **dentro do budget e prazo**.</li>
-                            <li>**Growth & Automação:** Líder no desenvolvimento de fluxos de **automação** (RD Station, Make, n8n) para relacionamento e nutrição, otimizando o *customer journey* (CX/UX).</li>
-                            <li>**Análise de Impacto:** Criação de *dashboards* de performance (KPIs, NPS) para garantir a **tomada de decisão baseada em dados** e otimização contínua.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Base Eventos -->
-                    <div class="border-b pb-4">
-                        <h4 class="text-xl font-extrabold text-indigo-800">Base Eventos (Rio Innovation Week e LER) – Produtora de Eventos Corporativos</h4>
-                        <p class="text-sm italic text-gray-500 mb-3">2021 – 2022 | Rio de Janeiro – RJ</p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                            <li>**Excelência Operacional:** Gestão completa da arena HealthTech no RIW, incluindo **curadoria de conteúdo**, coordenação de equipes, fornecedores e controle rígido de budget (RFP).</li>
-                            <li>**Experiência Imersiva:** Atuação em ambiente de **inovação e tecnologia**, com foco em cenografia, A/V e geração qualificada de *leads*.</li>
-                            <li>**Comunicação Integrada:** Suporte estratégico ao marketing para campanhas de divulgação e relacionamento com patrocinadores.</li>
-                        </ul>
-                    </div>
-
-                    <!-- AlquimIA -->
-                    <div class="pb-4">
-                        <h4 class="text-xl font-extrabold text-indigo-800">AlquimIA Automações – Fundadora & CEO</h4>
-                        <p class="text-sm italic text-gray-500 mb-3">2020 – 2022 | Empreendimento Próprio | SaaS & Tecnologia</p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                            <li>**Otimização de Custos:** Criação e implementação de soluções de **automação e chatbots com IA**, integrando CRMs e canais digitais para redução de custos B2B.</li>
-                            <li>**Gestão por ROI:** Gerenciamento de projetos com foco em **performance e Retorno sobre Investimento (ROI)**.</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- 3. TOOLKIT E DIFERENCIAIS (Habilidades e Fit Cultural) -->
-            <section id="section-toolkit" class="section section-card p-6 md:p-10 rounded-xl shadow-lg hidden">
-                <h3 class="text-3xl font-bold color-innovation mb-6">🛠️ Habilidades & Fit Cultural</h3>
-
+                
+                <!-- CONTEÚDO MOVIDO DE TOOLKIT -->
+                <h3 class="text-2xl font-bold color-innovation mt-10 mb-6 border-b-2 border-lime-400 pb-2">🛠️ Toolkit Estratégico e Cultural</h3>
+                
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <!-- Toolkit -->
                     <div>
-                        <h4 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-lime-400 pb-2">Toolkit Estratégico (Suas Ferramentas)</h4>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4 pb-2">Suas Ferramentas</h4>
                         
                         <div class="space-y-4">
                             <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
                                 <p class="font-bold text-lg color-innovation">Eventos B2B LATAM</p>
-                                <p class="text-sm text-gray-600">Planejamento, RFP, Roteiro, Cenografia, A/V, *Speakers*. **Domínio da Operação (Requisito Principal)**</p>
+                                <p class="text-sm text-gray-600">Planejamento, RFP, Roteiro, Cenografia, A/V, *Speakers*. <b>Domínio da Operação (Requisito Principal)</b></p>
                             </div>
                             <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
                                 <p class="font-bold text-lg color-innovation">Growth & Automação</p>
-                                <p class="text-sm text-gray-600">RD Station Marketing/CRM, **Make (n8n)**, Funis de Nutrição e Aquisição. **Software e Automação (Diferencial Stays)**</p>
+                                <p class="text-sm text-gray-600">RD Station Marketing/CRM, <b>Make (n8n)</b>, Funis de Nutrição e Aquisição. <b>Software e Automação (Diferencial Stays)</b></p>
                             </div>
                             <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
                                 <p class="font-bold text-lg color-innovation">Data & Finanças</p>
-                                <p class="text-sm text-gray-600">Looker Studio, Sheets, Planejamento de **Budget**, Controle de Custos. **Foco em Resultados e Decisão Baseada em Dados**</p>
+                                <p class="text-sm text-gray-600">Looker Studio, Sheets, Planejamento de <b>Budget</b>, Controle de Custos. <b>Foco em Resultados e Decisão Baseada em Dados</b></p>
                             </div>
                             <div class="bg-indigo-50 p-4 rounded-lg shadow-sm">
                                 <p class="font-bold text-lg color-innovation">Soft Skills & Cultura</p>
-                                <p class="text-sm text-gray-600">**Espanhol Intermediário** (em desenvolvimento), Liderança Colaborativa, **Resiliência e Adaptabilidade**. **Ética, Transparência, Aprendizagem Contínua**</p>
+                                <p class="text-sm text-gray-600"><b>Espanhol Intermediário</b> (em desenvolvimento), Liderança Colaborativa, <b>Resiliência e Adaptabilidade</b>. <b>Ética, Transparência, Aprendizagem Contínua</b></p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Diferenciais Stays -->
                     <div class="flex flex-col">
-                        <h4 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-lime-400 pb-2">🌍 Diferenciais Stays (Matching Cultural)</h4>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4 pb-2">🌍 Diferenciais Stays (Matching Cultural)</h4>
                         <div class="flex-grow space-y-4">
                             <div class="p-4 bg-lime-50 rounded-lg shadow-sm border-l-4 border-lime-500">
                                 <p class="font-bold text-gray-800">✅ Foco B2B Tech</p>
@@ -214,7 +169,49 @@
                 </div>
             </section>
 
-            <!-- 4. FORMAÇÃO (A Rota de Aprendizagem) -->
+            <!-- 2. TRAJETÓRIA PROFISSIONAL (A Jornada Detalhada) -->
+            <section id="section-trajetoria" class="section section-card p-6 md:p-10 rounded-xl shadow-lg hidden">
+                <h3 class="text-3xl font-bold color-innovation mb-6">🚀 Trajetória Profissional (Experiencia de Liderazgo)</h3>
+
+                <!-- Acordion for Jobs -->
+                <div class="space-y-6">
+
+                    <!-- UXMed -->
+                    <div class="border-b pb-4">
+                        <h4 class="text-xl font-extrabold text-indigo-800">UXMed – Coordenadora de Projetos e Inovação</h4>
+                        <p class="text-sm italic text-gray-500 mb-3">Nov/2022 – Atual | Remoto | Healthtech</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><b>Planejamento Ponta a Ponta:</b> Coordenação do ciclo completo de eventos B2B (webinars e presenciais), garantindo a entrega <b>dentro do budget e prazo</b>.</li>
+                            <li><b>Growth & Automação:</b> Líder no desenvolvimento de fluxos de <b>automação</b> (RD Station, Make, n8n) para relacionamento e nutrição, otimizando o *customer journey* (CX/UX).</li>
+                            <li><b>Análise de Impacto:</b> Criação de *dashboards* de performance (KPIs, NPS) para garantir a <b>tomada de decisão baseada em dados</b> e otimização contínua.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Base Eventos -->
+                    <div class="border-b pb-4">
+                        <h4 class="text-xl font-extrabold text-indigo-800">Base Eventos (Rio Innovation Week e LER) – Produtora de Eventos Corporativos</h4>
+                        <p class="text-sm italic text-gray-500 mb-3">2021 – 2022 | Rio de Janeiro – RJ</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><b>Excelência Operacional:</b> Gestão completa da arena HealthTech no RIW, incluindo <b>curadoria de conteúdo</b>, coordenação de equipes, fornecedores e controle rígido de budget (RFP).</li>
+                            <li><b>Experiência Imersiva:</b> Atuação em ambiente de <b>inovação e tecnologia</b>, com foco em cenografia, A/V e geração qualificada de *leads*.</li>
+                            <li><b>Comunicação Integrada:</b> Suporte estratégico ao marketing para campanhas de divulgação e relacionamento com patrocinadores.</li>
+                        </ul>
+                    </div>
+
+                    <!-- AlquimIA -->
+                    <div class="pb-4">
+                        <h4 class="text-xl font-extrabold text-indigo-800">AlquimIA Automações – Fundadora & CEO</h4>
+                        <p class="text-sm italic text-gray-500 mb-3">2020 – 2022 | Empreendimento Próprio | SaaS & Tecnologia</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><b>Otimização de Custos:</b> Criação e implementação de soluções de <b>automação e chatbots com IA</b>, integrando CRMs e canais digitais para redução de custos B2B.</li>
+                            <li><b>Gestão por ROI:</b> Gerenciamento de projetos com foco em <b>performance e Retorno sobre Investimento (ROI)</b>.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 3. FORMAÇÃO (A Rota de Aprendizagem) -->
             <section id="section-formacao" class="section section-card p-6 md:p-10 rounded-xl shadow-lg hidden">
                 <h3 class="text-3xl font-bold color-innovation mb-6">🎓 Rota de Aprendizagem (Formación)</h3>
                 <p class="text-gray-700 mb-6 text-sm">O aprendizado contínuo é um valor. Esta seção lista a base acadêmica e as certificações que complementam sua experiência prática.</p>
